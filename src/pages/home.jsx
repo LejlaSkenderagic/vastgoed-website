@@ -3,7 +3,7 @@ import { HeroSection } from "../components/heroSection";
 import { AboutSection } from "../components/aboutSection";
 import { ServicesSection } from "../components/servicesSection";
 import { ContactSection } from "../components/contactSection";
-import { Footer } from "../components/Footer";
+import { Footer } from "../components/footer";
 
 
 export const Home = () => {
