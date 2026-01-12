@@ -1,5 +1,5 @@
 import { ArrowUp } from "lucide-react";
-import logoSvg from "../assets/logo2.0.svg?react";
+import logo from "../assets/vinci_bouw_logo.svg";
 
 export const Footer = () => {
   return (
