@@ -42,18 +42,18 @@ export const ContactSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="gradient-border p-8 card-hover">
-            <h3 className="text-2xl font-semibold mb-6 text-amber-900">Contactgegevens</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-foreground">Contactgegevens</h3>
 
             <div className="space-y-6 justify-center">
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-amber-100/20">
-                  <Mail className="h-6 w-6 text-amber-900" />
+                  <Mail className="h-6 w-6 text-foreground" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-amber-900 ">Email</h4>
+                  <h4 className="font-medium text-foreground ">Email</h4>
                   <a
                     href="mailto:info@vastgoedwerving.nl"
-                    className="text-amber-900 hover:text-orange-950 transition-colors"
+                    className="text-foreground hover:text-orange-950 transition-colors"
                   >
                     info@vastgoedwerving.nl
                   </a>
@@ -62,13 +62,13 @@ export const ContactSection = () => {
 
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-amber-100/20">
-                  <Phone className="h-6 w-6 text-amber-900" />
+                  <Phone className="h-6 w-6 text-foreground" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-amber-900">Telefoon</h4>
+                  <h4 className="font-medium text-foreground">Telefoon</h4>
                   <a
                     href="tel:+31612345678"
-                    className="text-amber-900 hover:text-orange-950 transition-colors"
+                    className="text-foreground hover:text-orange-950 transition-colors"
                   >
                     +31 6 1234 5678
                   </a>
@@ -77,16 +77,16 @@ export const ContactSection = () => {
 
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-amber-100/20">
-                  <MapPin className="h-6 w-6 text-amber-900" />
+                  <MapPin className="h-6 w-6 text-foreground" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-amber-900">Locatie</h4>
-                  <span className="text-amber-900 hover:text-orange-950 transition-colors">
+                  <h4 className="font-medium text-foreground">Locatie</h4>
+                  <span className="text-foreground hover:text-orange-950 transition-colors">
                     Zwolle, Overijssel
                   </span>
                 </div>
               </div>
-              <p className="text-center pt-4 text-amber-900 mb-12 max-w-2xl mx-auto"> 
+              <p className="text-center pt-4 text-foreground mb-12 max-w-2xl mx-auto"> 
               Wilt u iets bespreken, een offerte ontvangen of meer weten over het onderhoud of beheer van uw vastgoed? Bel of mail ons gerust — we denken graag met u mee.
              </p>
             </div>

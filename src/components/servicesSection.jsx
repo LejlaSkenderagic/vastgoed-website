@@ -29,7 +29,7 @@ export const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-24 px-4 relative section-bg">
+    <section id="services" className="py-24 px-4 relative section-bg wave-divider rounded-t-[50px]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Onderhoud <span className="text-primary">& Renovatie</span>
@@ -75,7 +75,7 @@ export const ServicesSection = () => {
                 {/* Read More Button */}
                 <a
                   href={`/services#${service.id}`}
-                  className="mt-auto px-4 py-2 rounded-full bg-primary text-white font-medium text-sm transition-all duration-300 hover:scale-105 active:scale-95"
+                  className="mt-auto px-4 py-2 rounded-full bg-foreground text-white font-medium text-sm transition-all duration-300 hover:scale-105 active:scale-95"
                 >
                   Lees meer
                 </a>

@@ -1,98 +1,76 @@
-import { CheckCircle, Shield, Handshake, Megaphone, Users, Eye, FileText } from "lucide-react";
+import { CheckCircle, Shield, Handshake, Megaphone, Users, Eye, FileText, Zap, Hammer } from "lucide-react";
+import contractorImage from "../assets/contractor.jpg";
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="w-full py-24 relative">
-      <div className="w-full p-8 px-4">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            Over <span className="text-foreground"> Ons</span>
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section id="about" className="py-24 px-4 relative">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Text Column */}
-            <div className="space-y-6 section-bg rounded-lg p-8 animate-slide-up" style={{ animation: "slide-up 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards", opacity: 1 }}>
+            <div className="space-y-6 animate-slide-up" style={{ animation: "slide-up 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards", opacity: 1 }}>
 
-              <h3 className="text-2xl font-semibold text-foreground">Wat wij doen</h3>
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+                  Uw partner in bouwen
+                  <span className="text-primary"> en verbouwen</span>
+                </h2>
 
-              <p className="text-muted-foreground">
-                Uw pand in topconditie houden is ons vak. Wij bieden een compleet pakket aan onderhouds- en renovatiediensten voor woningen en bedrijfspanden.
-              </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Wij zijn een solide en betrouwbaar bouwbedrijf. Wij helpen u met nieuwbouw, renovatie en verbouwingen. Kwaliteit en vakmanschap staan centraal.
+                </p>
+              </div>
 
-              <p className="text-muted-foreground">
-                Onze diensten:
-              </p>
-
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start gap-3 animate-fade-in-delay-1" style={{ animation: "fade-in 0.6s ease-out 0.2s forwards", opacity: 0 }}>
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span><strong>Onderhoudswerkzaamheden:</strong> Van kleine reparaties tot periodiek onderhoud, wij zorgen dat alles werkt.</span>
-                </li>
-                <li className="flex items-start gap-3 animate-fade-in-delay-2" style={{ animation: "fade-in 0.6s ease-out 0.3s forwards", opacity: 0 }}>
-                  <Shield className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span><strong>Renovatieprojecten:</strong> Complete verbouwingen, modernisering en verduurzaming van uw pand.</span>
-                </li>
-                <li className="flex items-start gap-3 animate-fade-in-delay-3" style={{ animation: "fade-in 0.6s ease-out 0.4s forwards", opacity: 0 }}>
-                  <Eye className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span><strong>Inspectie & Advies:</strong> Grondige inspecties en deskundig advies voor een duurzaam resultaat.</span>
-                </li>
-                <li className="flex items-start gap-3 animate-fade-in-delay-4" style={{ animation: "fade-in 0.6s ease-out 0.5s forwards", opacity: 0 }}>
-                  <FileText className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span><strong>Transparante offertes:</strong> Heldere afspraken en duidelijke communicatie, zonder verrassingen.</span>
-                </li>
-              </ul>
-
-              
+              {/* Features */}
+              <div className="grid grid-cols-3 gap-4 py-4">
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <div className="mb-2 flex justify-center">
+                    <Zap className="h-8 w-8 text-primary" />
+                  </div>
+                  <p className="font-bold text-sm text-foreground">Binnen 24u reactie</p>
+                </div>
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <div className="mb-2 flex justify-center">
+                    <Hammer className="h-8 w-8 text-primary" />
+                  </div>
+                  <p className="font-bold text-sm text-foreground">Ervaren vakmannen</p>
+                </div>
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <div className="mb-2 flex justify-center">
+                    <CheckCircle className="h-8 w-8 text-primary" />
+                  </div>
+                  <p className="font-bold text-sm text-foreground">Betrouwbaar vakwerk</p>
+                </div>
+              </div>
             </div>
 
-            {/* Right Feature Cards */}
-            <div className="grid grid-cols-1 gap-6">
-              <div className="gradient-border p-6 card-hover animate-scale-in" style={{ animation: "scale-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s forwards", opacity: 0 }}>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-primary/30">
-                    <CheckCircle className="h-6 w-6 text-primary" />
-                  </div>
-                  <div className="text-left">
-                    <h4 className="font-semibold text-lg" style={{ color: "#713309" }}>Grondige Screening</h4>
-                    <p style={{ color: "#713309" }}>
-                      Wij controleren alles: inkomsten, referenties en betrouwbaarheid van de kandidaat.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="gradient-border p-6 card-hover animate-scale-in" style={{ animation: "scale-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards", opacity: 0 }}>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-primary/30">
-                    <Shield className="h-6 w-6 text-primary" />
-                  </div>
-                  <div className="text-left">
-                    <h4 className="font-semibold text-lg" style={{ color: "#713309" }}>Uw Belangen Beschermd</h4>
-                    <p style={{ color: "#713309" }}>
-                      Transparante afspraken en professioneel contractbeheer voor totale veiligheid.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="gradient-border p-6 card-hover animate-scale-in" style={{ animation: "scale-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s forwards", opacity: 0 }}>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-primary/30">
-                    <Handshake className="h-6 w-6 text-primary" />
-                  </div>
-
-                  <div className="text-left">
-                    <h4 className="font-semibold text-lg" style={{ color: "#713309" }}>Lokale Expertise</h4>
-                    <p style={{ color: "#713309" }}>
-                      Jaren ervaring en breed netwerk in de regio voor de beste resultaten.
-                    </p>
-                  </div>
-                </div>
+            {/* Right Images - VinciBouw Style */}
+            <div className="flex gap-4 h-96 animate-fade-in" style={{ animation: "fade-in 0.6s ease-out 0.2s forwards", opacity: 0 }}>
+              {/* Large Image - Left side */}
+              <img 
+                src={contractorImage}
+                alt="Contractor at work"
+                className="w-3/5 h-full object-cover rounded-2xl shadow-lg"
+              />
+              
+              {/* Right side - Two stacked small images */}
+              <div className="w-2/5 flex flex-col gap-4">
+                {/* Top Small Image */}
+                <img 
+                  src={contractorImage}
+                  alt="Construction project"
+                  className="w-full h-1/2 object-cover rounded-xl shadow-md"
+                />
+                
+                {/* Bottom Small Image */}
+                <img 
+                  src={contractorImage}
+                  alt="House renovation"
+                  className="w-full h-1/2 object-cover rounded-xl shadow-md"
+                />
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  );
-};
+      </section>
+    );
+  };

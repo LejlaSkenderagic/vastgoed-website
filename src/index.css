@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-border: hsl(var(--border));
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
+  --color-border: #E8E8E8;
+  --color-background: #FFFFFF;
+  --color-foreground: #8B4513;
 
-  --color-primary: hsl(var(--primary));
-  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary: #FF8800;
+  --color-primary-foreground: #D9D3CD;
 
-  --color-card: hsl(var(--card));
+  --color-secondary: #0D152D;
+
+  --color-card: #FF8800;
 
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
@@ -86,16 +88,18 @@
 
 @layer base {
   :root {
-    --background: 0, 0%, 100%;
-    --foreground: 25, 85%, 35%;
+    --background: #FFFFFF;
+    --foreground: #8B4513;
 
-    --card: 32, 95%, 44%;
+    --card: #FF8800;
 
-    --primary: 32, 95%, 44%;
-    --primary-foreground: 28 27% 86%;
+    --primary: #FF8800;
+    --primary-foreground: #D9D3CD;
+    
+    --secondary: #0D152D;
 
-    --border: 28 27% 86%;
-    --section-bg: 39, 90%, 56%;
+    --border: #E8E8E8;
+    --section-bg: #FFAA00;
   }
 
   * {
@@ -144,7 +148,7 @@
 
 @utility gradient-border {
   @apply relative rounded-md;
-  background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
+  background: linear-gradient(to right, #FF8800, #FF8800);
   background-clip: padding-box;
   border: 1px solid transparent;
 }
@@ -156,7 +160,7 @@
 }
 
 @utility section-bg {
-  background-color: hsla(var(--section-bg), 0.5);
+  background-color: rgba(255, 170, 0, 0.5);
 }
 
 @utility animate-fade-in {
@@ -196,6 +200,33 @@
 @utility animate-icon-bounce {
   animation: icon-bounce 0.8s ease-out forwards;
   opacity: 0;
+}
+
+@layer components {
+  .wave-divider {
+    position: relative;
+  }
+
+  .wave-divider::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 120px;
+    background-image: url('/src/assets/layer1.svg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .wave-divider > * {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 #root {

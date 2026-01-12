@@ -1,4 +1,5 @@
 import { ArrowDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroVideo from "../assets/video.mp4";
 
 export const HeroSection = () => {
@@ -35,9 +36,9 @@ export const HeroSection = () => {
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-            <a href="#contact" className="cosmic-button">
-              Neem contact op
-            </a>
+            <Link to="/contact" className="cosmic-button text-white">
+              Vraag een offerte aan
+            </Link>
           </div>
 
           

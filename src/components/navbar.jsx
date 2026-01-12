@@ -2,14 +2,13 @@ import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo2.0.svg";
+import logo from "../assets/vinci_bouw_logo.svg";
 
 
 const navItems = [
-  { name: "Home", href: "/", isRoute: true },
-  { name: "About", href: "/#about", isRoute: false },
-  { name: "Services", href: "/services", isRoute: true },
-  { name: "Contact", href: "/#contact", isRoute: false },
+  { name: "Over ons", href: "/#about", isRoute: false },
+  { name: "Diensten", href: "/services", isRoute: true },
+  { name: "Contact", href: "/contact", isRoute: true },
 ];
 
 export const Navbar = () => {
@@ -46,8 +45,8 @@ export const Navbar = () => {
             )}
           />
           <span className="text-xl font-bold">
-            <span className="text-foreground">Bouw</span>{" "}
-            <span className="text-primary">Broeders</span>
+            <span className="text-foreground">Vinci</span>{" "}
+            <span className="text-primary">Bouw</span>
           </span>
         </a>
 

@@ -1,5 +1,6 @@
 import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
+import { Link } from "react-router-dom";
 import { Wrench, Hammer, Lightbulb, Droplet, CheckCircle, Clock, Users, Zap } from "lucide-react";
 import contractorImage from "../assets/contractor.jpg";
 import { useEffect } from "react";
@@ -250,7 +251,7 @@ export const Services = () => {
               Neem contact op voor een vrijblijvende offerte of adviesgesprek. Wij denken graag met u mee.
             </p>
             <a
-              href="/#contact"
+              href="/contact"
               className="inline-block px-8 py-3 rounded-full bg-primary text-white font-medium text-lg transition-all duration-300 hover:scale-105 active:scale-95"
             >
               Neem Contact Op
