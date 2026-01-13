@@ -44,10 +44,7 @@ export const Navbar = () => {
               isScrolled ? "h-14 md:h-16" : "h-20 md:h-22"
             )}
           />
-          <span className="text-xl font-bold">
-            <span className="text-foreground">Vinci</span>{" "}
-            <span className="text-primary">Bouw</span>
-          </span>
+          
         </a>
 
         {/* Desktop nav */}
