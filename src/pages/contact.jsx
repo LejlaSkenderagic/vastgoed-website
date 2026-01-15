@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
 import { Navbar } from "../components/navbar";
-import { Footer } from "../components/footer";
+import { Footer } from "../components/Footer";
 
 export const Contact = () => {
   const handleSubmit = (e) => {

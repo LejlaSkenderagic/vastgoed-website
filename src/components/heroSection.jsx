@@ -26,12 +26,12 @@ export const HeroSection = () => {
         <div className="space-y-6 bg-white/25 backdrop-blur-md rounded-2xl p-8 md:p-12 w-fit mx-auto">
 
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            <span className="opacity-0 animate-fade-in">Snel en vakkundig</span>
+            <span className="text-secondary opacity-0 animate-fade-in">Renovatie en </span>
             <span className="text-primary opacity-0 animate-fade-in-delay-1"> onderhoud</span>
-            <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2"> & renovatie</span>
+            <span className="text-secondary text-gradient ml-2 opacity-0 animate-fade-in-delay-2"> Wij doen het goed én snel.</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-amber-950 max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
+          <p className="text-lg md:text-xl text-secondary max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
             Wij verzorgen professioneel onderhoud, renovatie en herstel van uw woning of bedrijfspand. Betrouwbaar vakmanschap, zorgeloos resultaat.
           </p>
 

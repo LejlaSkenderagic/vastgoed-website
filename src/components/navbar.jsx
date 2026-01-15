@@ -28,20 +28,20 @@ export const Navbar = () => {
     <nav
       className={cn(
         "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-2 bg-black/5 backdrop-blur-sm shadow-xs" : "py-2"
+        isScrolled ? "py-1 bg-black/5 backdrop-blur-sm shadow-xs" : "py-1"
       )}
     >
-      <div className="flex items-center justify-between px-8 md:px-14 w-full">
+      <div className="flex items-center justify-between px-6 md:px-10 w-full">
         <a
           className="flex items-center gap-3 z-10"
           href="/"
         >
           <img 
             src={logo}
-            alt="Bouw Broeders"
+            alt="Vinci Bouw"
             className={cn(
               "w-auto transition-all duration-300",
-              isScrolled ? "h-14 md:h-16" : "h-20 md:h-22"
+              isScrolled ? "h-16 md:h-20" : "h-28 md:h-32"
             )}
           />
           
@@ -54,7 +54,7 @@ export const Navbar = () => {
               <Link
                 key={key}
                 to={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                className="font-bold text-secondary hover:text-primary transition-colors duration-300"
               >
                 {item.name}
               </Link>
@@ -62,7 +62,7 @@ export const Navbar = () => {
               <a
                 key={key}
                 href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                className="font-bold text-secondary hover:text-primary transition-colors duration-300"
               >
                 {item.name}
               </a>
@@ -97,7 +97,7 @@ export const Navbar = () => {
                 <Link
                   key={key}
                   to={item.href}
-                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                  className="font-bold text-secondary hover:text-primary transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -106,7 +106,7 @@ export const Navbar = () => {
                 <a
                   key={key}
                   href={item.href}
-                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                  className="font-bold text-secondary hover:text-primary transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

@@ -23,7 +23,7 @@ export const ContactBanner = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-1">Whatsapp.</h3>
-                <p className="text-base">+31 (6) 12345678</p>
+                <p className="text-base whitespace-nowrap">+31 (6) 12345678</p>
               </div>
             </div>
 
@@ -34,7 +34,7 @@ export const ContactBanner = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-1">Email.</h3>
-                <p className="text-base">info@vincibouw.nl</p>
+                <p className="text-base whitespace-nowrap">info@vincibouw.nl</p>
               </div>
             </div>
 
@@ -45,18 +45,18 @@ export const ContactBanner = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-1">Vestiging.</h3>
-                <p className="text-base">Adres hier</p>
+                <p className="text-base whitespace-nowrap">Adres hier</p>
               </div>
             </div>
           </div>
 
           {/* Right CTA Button */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 self-start lg:self-center">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-primary text-white font-semibold rounded-full hover:bg-orange-700 transition-all text-lg whitespace-nowrap"
+              className="px-6 py-3 bg-primary text-white font-semibold rounded-full hover:bg-orange-700 transition-all text-base whitespace-nowrap"
             >
-              Ik wil kennismaken
+              Vraag offerte aan
             </Link>
           </div>
         </div>

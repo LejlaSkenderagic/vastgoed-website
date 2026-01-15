@@ -1,5 +1,5 @@
 import { Navbar } from "../components/navbar";
-import { Footer } from "../components/footer";
+import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
 import { Wrench, Hammer, Lightbulb, Droplet, CheckCircle, Clock, Users, Zap } from "lucide-react";
 import contractorImage from "../assets/contractor.jpg";
@@ -107,7 +107,7 @@ export const Services = () => {
 
         {/* Services Details */}
         <section className="py-24 px-4">
-          <div className="max-w-5xl mx-auto space-y-20">
+          <div className="max-w-6xl mx-auto space-y-20">
             {services.map((service, serviceIdx) => {
               const Icon = service.icon;
               const isSwapped = serviceIdx === 1 || serviceIdx === 3;
@@ -166,39 +166,45 @@ export const Services = () => {
         </section>
 
         {/* Process Section */}
-        <section className="py-24 px-4 section-bg">
-          <div className="max-w-7xl mx-auto flex flex-col">
+        <section className="py-24 px-4 bg-background">
+          <div className="section-bg max-w-6xl mx-auto bg-section-bg rounded-2xl shadow-xl p-12 flex flex-col">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-              Onze <span className="text-primary">Werkwijze</span>
+              Onze <span className="text-primary ">Werkwijze</span>
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-center flex-1">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center flex-1">
               {/* Left - Process Steps (2 columns) */}
               <div className="order-1 space-y-6 md:col-span-2 flex flex-col justify-center">
                 {[
                   {
                     icon: Users,
                     step: "1",
-                    title: "Kennismaking & Inventarisatie",
-                    desc: "We starten met een gesprek over uw wensen en brengen de staat van uw pand in kaart.",
+                    title: "Kennismaking",
+                    desc: "We luisteren naar uw wensen en inventariseren uw pand.",
                   },
                   {
                     icon: Lightbulb,
                     step: "2",
                     title: "Advies & Offerte",
-                    desc: "U ontvangt een transparante offerte met heldere prijsopgave en planning.",
+                    desc: "Transparante offerte met heldere prijzen en realistisch tijdsplan.",
                   },
                   {
                     icon: Hammer,
                     step: "3",
-                    title: "Professionele Uitvoering",
-                    desc: "Onze professionals voeren het werk vakkundig uit. U heeft één aanspreekpunt.",
+                    title: "Uitvoering",
+                    desc: "Vakkundig werk met één vast aanspreekpunt.",
                   },
                   {
                     icon: CheckCircle,
                     step: "4",
-                    title: "Oplevering & Nazorg",
-                    desc: "We controleren samen het resultaat en blijven beschikbaar voor toekomstig onderhoud.",
+                    title: "Oplevering",
+                    desc: "Gezamenlijke controle en acceptatie van het resultaat.",
+                  },
+                  {
+                    icon: Clock,
+                    step: "5",
+                    title: "Nazorg",
+                    desc: "Blijvende ondersteuning en beschikbaarheid voor toekomstige werkzaamheden.",
                   },
                 ].map((item, idx) => {
                   const StepIcon = item.icon;
@@ -243,7 +249,7 @@ export const Services = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4 bg-background">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Klaar voor het volgende onderhoud of renovatie?
             </h2>
