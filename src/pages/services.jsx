@@ -140,7 +140,7 @@ export const Services = () => {
                               opacity: 0,
                             }}
                           >
-                            <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                            <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                             <span className="text-muted-foreground">{detail}</span>
                           </li>
                         ))}
@@ -218,7 +218,7 @@ export const Services = () => {
                       }}
                     >
                       <div 
-                        className="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 flex-shrink-0 animate-icon-bounce"
+                        className="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 shrink-0 animate-icon-bounce"
                         style={{
                           animation: `icon-bounce 0.8s ease-out ${idx * 0.15 + 0.2}s forwards`,
                           opacity: 0,
