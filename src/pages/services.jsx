@@ -260,7 +260,7 @@ export const Services = () => {
               href="/contact"
               className="inline-block px-8 py-3 rounded-full bg-primary text-white font-medium text-lg transition-all duration-300 hover:scale-105 active:scale-95"
             >
-              Neem Contact Op
+              Vraag een offerte aan
             </a>
           </div>
         </section>
