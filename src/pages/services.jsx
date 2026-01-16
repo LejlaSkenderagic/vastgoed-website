@@ -1,5 +1,5 @@
 import { Navbar } from "../components/navbar";
-import { Footer } from "../components/Footer";
+import { Footer } from "../components/footer";
 import { Link } from "react-router-dom";
 import { Wrench, Hammer, Lightbulb, Droplet, CheckCircle, Clock, Users, Zap } from "lucide-react";
 import contractorImage from "../assets/contractor.jpg";
