@@ -5,7 +5,7 @@ import { ServicesSection } from "../components/servicesSection";
 import { WhatWeDoSection } from "../components/whatWeDoSection";
 import { ProjectsSection } from "../components/projectsSection";
 import { ContactBanner } from "../components/contactBanner";
-import { Footer } from "../components/Footer";
+import { Footer } from "../components/footer";
 
 
 export const Home = () => {
