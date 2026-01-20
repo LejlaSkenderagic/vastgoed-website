@@ -23,7 +23,7 @@ export const ContactBanner = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-1">Whatsapp.</h3>
-                <p className="text-base whitespace-nowrap">+31 (6) 12345678</p>
+                <p className="text-base whitespace-nowrap">+31 6 12602934</p>
               </div>
             </div>
 
@@ -34,7 +34,7 @@ export const ContactBanner = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-1">Email.</h3>
-                <p className="text-base whitespace-nowrap">info@vincibouw.nl</p>
+                <p className="text-base whitespace-nowrap">info@vinchibouw.nl</p>
               </div>
             </div>
 
@@ -45,7 +45,7 @@ export const ContactBanner = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-1">Vestiging.</h3>
-                <p className="text-base whitespace-nowrap">Adres hier</p>
+                <p className="text-base whitespace-nowrap">Grote Voort 247, 8041 BL Zwolle</p>
               </div>
             </div>
           </div>

@@ -46,16 +46,16 @@ export const Footer = () => {
                 <p className="font-bold text-lg text-white mb-4">Vinci Bouw</p>
                 <div className="flex items-center gap-3">
                   <MapPin size={22} className="text-primary flex-shrink-0" />
-                  <span className="text-lg text-gray-300">Adres hier</span>
+                  <span className="text-lg text-gray-300">Grote Voort 247, 8041 BL Zwolle</span>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={22} className="text-primary flex-shrink-0" />
-                <span className="text-lg text-gray-300">+31 (0)6 12345678</span>
+                <span className="text-lg text-gray-300">+31 6 12602934</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={22} className="text-primary flex-shrink-0" />
-                <span className="text-lg text-gray-300">info@vincibouw.nl</span>
+                <span className="text-lg text-gray-300">info@vinchibouw.nl</span>
               </div>
             </div>
           </div>

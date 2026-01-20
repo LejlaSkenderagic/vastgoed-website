@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
 import { Navbar } from "../components/navbar";
-import { Footer } from "../components/footer";
+import { Footer } from "../components/Footer";
 
 export const Contact = () => {
   const handleSubmit = (e) => {
@@ -36,7 +36,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">Whatsapp.</h3>
-                  <p className="text-base text-gray-600">+31 (0)6 12345678</p>
+                  <p className="text-base text-gray-600">+31 6 12602934</p>
                 </div>
               </div>
 
@@ -58,7 +58,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">Vestiging.</h3>
-                  <p className="text-base text-gray-600">Nijenhuislaan 20
+                  <p className="text-base text-gray-600">Grote Voort 247, 8041 BL Zwolle
                   </p>
                 </div>
               </div>
