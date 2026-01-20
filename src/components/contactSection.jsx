@@ -52,10 +52,10 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium text-foreground ">Email</h4>
                   <a
-                    href="mailto:info@vastgoedwerving.nl"
+                    href="mailto:info@vinchibouw.nl"
                     className="text-foreground hover:text-orange-950 transition-colors"
                   >
-                    info@vastgoedwerving.nl
+                    info@vinchibouw.nl
                   </a>
                 </div>
               </div>
@@ -67,10 +67,10 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium text-foreground">Telefoon</h4>
                   <a
-                    href="tel:+31612345678"
+                    href="tel:+31612602934"
                     className="text-foreground hover:text-orange-950 transition-colors"
                   >
-                    +31 6 1234 5678
+                    +31 6 12602934
                   </a>
                 </div>
               </div>
@@ -82,7 +82,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium text-foreground">Locatie</h4>
                   <span className="text-foreground hover:text-orange-950 transition-colors">
-                    Zwolle, Overijssel
+                    Grote Voort 247, 8041 BL Zwolle
                   </span>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export const ContactSection = () => {
                   name="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="a_style@something.bih"
+                  placeholder="info@vinchibouw.nl"
                 />
               </div>
 
