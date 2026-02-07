@@ -1,11 +1,57 @@
 import { Mail, Phone, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
+import { useState } from "react";
 import { Navbar } from "../components/navbar";
 import { Footer } from "../components/Footer";
 
 export const Contact = () => {
-  const handleSubmit = (e) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission
+    setLoading(true);
+    setStatus("");
+
+    try {
+      const response = await fetch("http://localhost:3000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus("✅ Email succesvol verzonden!");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus(""), 5000);
+      } else {
+        setStatus(`❌ Error: ${data.error}`);
+      }
+    } catch (error) {
+      setStatus(`❌ Error: ${error.message}`);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -92,8 +138,12 @@ export const Contact = () => {
                 </label>
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Je naam"
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary transition-colors"
+                  required
                 />
               </div>
 
@@ -104,20 +154,12 @@ export const Contact = () => {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="je@email.com"
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary transition-colors"
-                />
-              </div>
-
-              {/* Subject */}
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Onderwerp
-                </label>
-                <input
-                  type="text"
-                  placeholder="Onderwerp"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary transition-colors"
+                  required
                 />
               </div>
 
@@ -127,18 +169,34 @@ export const Contact = () => {
                   Bericht
                 </label>
                 <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows="5"
                   placeholder="Je bericht hier..."
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary transition-colors resize-none"
+                  required
                 ></textarea>
               </div>
+
+              {/* Status Message */}
+              {status && (
+                <div className={`p-3 rounded-lg text-center font-medium ${
+                  status.includes("✅") 
+                    ? "bg-green-100 text-green-800" 
+                    : "bg-red-100 text-red-800"
+                }`}>
+                  {status}
+                </div>
+              )}
 
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-orange-700 transition-all"
+                disabled={loading}
+                className="w-full px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-orange-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Verzenden
+                {loading ? "Verzenden..." : "Verzenden"}
               </button>
             </form>
           </div>
