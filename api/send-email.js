@@ -28,11 +28,11 @@ export default async function handler(req, res) {
   }
 
   try {
-    // E-mail configuratie
+    // E-mail configuratie voor mijndomein.nl
     const transporter = nodemailer.createTransport({
-      host: 'smtp-mail.outlook.com',
-      port: 587,
-      secure: false,
+      host: 'mail.mijndomein.nl',
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.EMAIL_ADDRESS,
         pass: process.env.EMAIL_PASS
