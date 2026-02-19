@@ -1,7 +1,7 @@
 import { Mail, Phone, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
 import { useState } from "react";
 import { Navbar } from "../components/navbar";
-import { Footer } from "../components/Footer";
+import { Footer } from "../components/footer";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
