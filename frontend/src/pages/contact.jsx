@@ -76,34 +76,28 @@ export const Contact = () => {
             {/* Contact Info Cards */}
             <div className="space-y-8">
               {/* Phone */}
-              <div className="flex gap-4">
-                <div className="w-12 flex-shrink-0">
-                  <Phone size={32} className="text-primary" />
-                </div>
+              <div className="grid grid-cols-[auto_1fr] gap-4 items-start">
+                <Phone size={32} className="text-primary" />
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground">Whatsapp.</h3>
+                  <h3 className="text-lg font-semibold text-foreground">Whatsapp</h3>
                   <p className="text-base text-gray-600">+31 6 12602934</p>
                 </div>
               </div>
 
               {/* Email */}
-              <div className="flex gap-4">
-                <div className="w-12 flex-shrink-0">
-                  <Mail size={32} className="text-primary" />
-                </div>
+              <div className="grid grid-cols-[auto_1fr] gap-4 items-start">
+                <Mail size={32} className="text-primary" />
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground">Email.</h3>
+                  <h3 className="text-lg font-semibold text-foreground">Email</h3>
                   <p className="text-base text-gray-600">info@vincibouw.nl</p>
                 </div>
               </div>
 
               {/* Location */}
-              <div className="flex gap-4">
-                <div className="w-12 flex-shrink-0">
-                  <MapPin size={32} className="text-primary" />
-                </div>
+              <div className="grid grid-cols-[auto_1fr] gap-4 items-start">
+                <MapPin size={32} className="text-primary" />
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground">Vestiging.</h3>
+                  <h3 className="text-lg font-semibold text-foreground">Vestiging</h3>
                   <p className="text-base text-gray-600">Grote Voort 247, 8041 BL Zwolle
                   </p>
                 </div>
