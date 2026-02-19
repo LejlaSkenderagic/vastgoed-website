@@ -1,0 +1,9 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Backend API for Vercel",
+  "main": "index.js",
+  "dependencies": {
+    "nodemailer": "^8.0.0"
+  }
+}
