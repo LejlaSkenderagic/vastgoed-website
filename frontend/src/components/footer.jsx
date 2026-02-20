@@ -1,19 +1,21 @@
-import { Mail, Phone, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import logo from "../assets/vinci_bouw_logo.svg";
 
 export const Footer = () => {
   return (
     <footer className="bg-[#0D152D]">
       <div className="py-16 px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-20">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20">
           
           {/* Brand & Description */}
           <div className="space-y-8 flex flex-col items-center">
-            <img 
-              src={logo}
-              alt="Vinci Bouw"
-              className="h-24 w-auto"
-            />
+            <div className="w-32 h-32 rounded-full bg-white flex items-center justify-center p-4">
+              <img 
+                src={logo}
+                alt="Vinci Bouw"
+                className="w-full h-full object-contain"
+              />
+            </div>
             <p className="text-lg text-gray-300 leading-relaxed max-w-xs text-center">
               Wij verzorgen professioneel onderhoud, renovatie en herstel van uw woning of bedrijfspand. Betrouwbaar vakmanschap, zorgeloos resultaat.
             </p>
@@ -43,7 +45,6 @@ export const Footer = () => {
             </div>
             <div className="space-y-6 text-left">
               <div>
-                <p className="font-bold text-lg text-white mb-4">Vinci Bouw</p>
                 <div className="flex items-center gap-3">
                   <MapPin size={22} className="text-primary flex-shrink-0" />
                   <span className="text-lg text-gray-300">Grote Voort 247, 8041 BL Zwolle</span>
@@ -55,33 +56,8 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={22} className="text-primary flex-shrink-0" />
-                <span className="text-lg text-gray-300">info@vinchibouw.nl</span>
+                <span className="text-lg text-gray-300">info@vincibouw.nl</span>
               </div>
-            </div>
-          </div>
-
-          {/* Socials */}
-          <div className="flex flex-col items-center text-center">
-            <h3 className="text-2xl font-bold text-white mb-8">Socials.</h3>
-            <div className="flex gap-4">
-              <a 
-                href="#" 
-                className="w-14 h-14 rounded-lg bg-white text-foreground flex items-center justify-center hover:bg-primary hover:text-white transition-all"
-              >
-                <Facebook size={28} />
-              </a>
-              <a 
-                href="#" 
-                className="w-14 h-14 rounded-lg bg-white text-foreground flex items-center justify-center hover:bg-primary hover:text-white transition-all"
-              >
-                <Instagram size={28} />
-              </a>
-              <a 
-                href="#" 
-                className="w-14 h-14 rounded-lg bg-white text-foreground flex items-center justify-center hover:bg-primary hover:text-white transition-all"
-              >
-                <Youtube size={28} />
-              </a>
             </div>
           </div>
         </div>

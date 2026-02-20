@@ -121,27 +121,27 @@ export const Services = () => {
                     opacity: 0,
                   }}
                 >
-                  <div className={`space-y-6 ${isSwapped ? 'order-2' : 'order-2 md:order-1'}`}>
-                    <h2 className="text-3xl md:text-4xl font-bold">
+                  <div className={`space-y-6 text-left ${isSwapped ? 'order-2' : 'order-2 md:order-1'}`}>
+                    <h2 className="text-3xl md:text-4xl font-bold text-left">
                       {service.title}
                     </h2>
-                    <p className="text-lg text-muted-foreground">
+                    <p className="text-lg text-muted-foreground text-left">
                       {service.fullDesc}
                     </p>
-                    <div className="space-y-3">
-                      <h3 className="font-semibold text-foreground">Ons aanbod:</h3>
+                    <div className="space-y-3 text-left">
+                      <h3 className="font-semibold text-foreground text-left">Ons aanbod:</h3>
                       <ul className="space-y-2">
                         {service.details.map((detail, idx) => (
                           <li 
                             key={idx} 
-                            className="flex items-start gap-3 animate-fade-in"
+                            className="flex items-start gap-3 animate-fade-in text-left"
                             style={{
                               animation: `fade-in 0.6s ease-out ${serviceIdx * 0.2 + idx * 0.08}s forwards`,
                               opacity: 0,
                             }}
                           >
                             <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                            <span className="text-muted-foreground">{detail}</span>
+                            <span className="text-muted-foreground text-left">{detail}</span>
                           </li>
                         ))}
                       </ul>
@@ -150,13 +150,15 @@ export const Services = () => {
 
                   <div className={`${isSwapped ? 'order-1' : 'order-1 md:order-2'}`}>
                     <div 
-                      className="p-12 rounded-lg bg-section-bg flex items-center justify-center h-64 animate-scale-in"
+                      className="flex items-center justify-center h-64 animate-scale-in"
                       style={{
                         animation: `scale-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) ${serviceIdx * 0.2 + 0.3}s forwards`,
                         opacity: 0,
                       }}
                     >
-                      <Icon className="h-32 w-32 text-primary/70" />
+                      <div className="w-48 h-48 rounded-full bg-primary/10 flex items-center justify-center">
+                        <Icon className="h-24 w-24 text-primary" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -174,7 +176,7 @@ export const Services = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center flex-1">
               {/* Left - Process Steps (2 columns) */}
-              <div className="order-1 space-y-6 md:col-span-2 flex flex-col justify-center">
+              <div className="order-1 space-y-6 md:col-span-2 flex flex-col justify-center items-start">
                 {[
                   {
                     icon: Users,
@@ -211,7 +213,7 @@ export const Services = () => {
                   return (
                     <div 
                       key={idx} 
-                      className="flex items-start gap-4 animate-slide-up"
+                      className="flex items-start gap-4 animate-slide-up w-full"
                       style={{
                         animation: `slide-up 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) ${idx * 0.15}s forwards`,
                         opacity: 0,
@@ -224,9 +226,9 @@ export const Services = () => {
                           opacity: 0,
                         }}
                       >
-                        <span className="text-lg font-bold text-primary">{item.step}</span>
+                        <span className="text-lg font-bold text-foreground">{item.step}</span>
                       </div>
-                      <div className="flex-1">
+                      <div className="flex-1 text-left">
                         <h3 className="font-semibold text-lg text-foreground">{item.title}</h3>
                         <p className="text-base text-muted-foreground">{item.desc}</p>
                       </div>
@@ -256,12 +258,12 @@ export const Services = () => {
             <p className="text-lg text-muted-foreground mb-8">
               Neem contact op voor een vrijblijvende offerte of adviesgesprek. Wij denken graag met u mee.
             </p>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block px-8 py-3 rounded-full bg-primary text-white font-medium text-lg transition-all duration-300 hover:scale-105 active:scale-95"
             >
               Vraag een offerte aan
-            </a>
+            </Link>
           </div>
         </section>
       </main>

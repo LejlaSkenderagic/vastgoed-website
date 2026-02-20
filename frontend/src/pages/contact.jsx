@@ -59,7 +59,7 @@ export const Contact = () => {
       <Navbar />
       
       {/* Main Contact Section */}
-      <section className="relative py-20 px-4 pt-32">
+      <section id="contact" className="relative py-20 px-4 pt-32 scroll-mt-20">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           
           {/* Left Column - Contact Info */}
@@ -101,22 +101,6 @@ export const Contact = () => {
                   <p className="text-base text-gray-600">Grote Voort 247, 8041 BL Zwolle
                   </p>
                 </div>
-              </div>
-            </div>
-
-            {/* Social Media */}
-            <div className="pt-4 text-center">
-              <h3 className="text-lg font-semibold mb-6">Socials.</h3>
-              <div className="flex gap-4 justify-center">
-                <a href="#" className="w-14 h-14 rounded-lg bg-white border border-gray-200 text-foreground flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                  <Facebook size={24} />
-                </a>
-                <a href="#" className="w-14 h-14 rounded-lg bg-white border border-gray-200 text-foreground flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                  <Instagram size={24} />
-                </a>
-                <a href="#" className="w-14 h-14 rounded-lg bg-white border border-gray-200 text-foreground flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                  <Youtube size={24} />
-                </a>
               </div>
             </div>
           </div>

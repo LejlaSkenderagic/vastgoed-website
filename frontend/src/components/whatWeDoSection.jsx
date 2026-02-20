@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 const services = [
   {
     name: "Schilder",
-    description: "Voor strok en duurzaam schilderwerk.",
+    description: "Voor strak en duurzaam schilderwerk.",
     Icon: Paintbrush,
   },
   {

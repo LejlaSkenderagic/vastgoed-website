@@ -1,4 +1,5 @@
 import { Wrench, Hammer, Lightbulb, Droplet } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const ServicesSection = () => {
   const maintenanceServices = [
@@ -73,12 +74,12 @@ export const ServicesSection = () => {
                 </p>
 
                 {/* Read More Button */}
-                <a
-                  href={`/services#${service.id}`}
+                <Link
+                  to={`/services#${service.id}`}
                   className="mt-auto px-4 py-2 rounded-full bg-foreground text-white font-medium text-sm transition-all duration-300 hover:scale-105 active:scale-95"
                 >
                   Lees meer
-                </a>
+                </Link>
               </div>
             );
           })}
