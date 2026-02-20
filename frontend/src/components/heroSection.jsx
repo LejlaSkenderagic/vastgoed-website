@@ -36,7 +36,7 @@ export const HeroSection = () => {
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-            <Link to="/contact" className="cosmic-button text-white">
+            <Link to="/contact#contact-form" className="cosmic-button text-white">
               Vraag een offerte aan
             </Link>
           </div>

@@ -30,7 +30,7 @@ export const ContactBanner = () => {
               <Mail size={28} className="text-primary justify-self-center" />
               <div className="text-left">
                 <h3 className="text-base font-semibold mb-1">Email.</h3>
-                <p className="text-sm">info@vinchibouw.nl</p>
+                <p className="text-sm">info@vincibouw.nl</p>
               </div>
             </div>
 
@@ -47,7 +47,7 @@ export const ContactBanner = () => {
           {/* Right CTA Button */}
           <div className="w-full lg:w-auto text-center">
             <Link
-              to="/contact"
+              to="/contact#contact-form"
               className="inline-block px-5 py-2.5 bg-primary text-white font-semibold rounded-full hover:bg-orange-700 transition-all text-sm whitespace-nowrap"
             >
               Vraag offerte aan!

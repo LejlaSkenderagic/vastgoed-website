@@ -259,7 +259,7 @@ export const Services = () => {
               Neem contact op voor een vrijblijvende offerte of adviesgesprek. Wij denken graag met u mee.
             </p>
             <Link
-              to="/contact"
+              to="/contact#contact-form"
               className="inline-block px-8 py-3 rounded-full bg-primary text-white font-medium text-lg transition-all duration-300 hover:scale-105 active:scale-95"
             >
               Vraag een offerte aan

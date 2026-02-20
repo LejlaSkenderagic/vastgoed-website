@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
 
@@ -11,6 +11,30 @@ export const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
+
+  useEffect(() => {
+    // Handle hash scrolling on page load and navigation
+    const handleHashScroll = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          setTimeout(() => {
+            const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+            const navHeight = 80; // Approximate navbar height
+            window.scrollTo({
+              top: elementPosition - navHeight,
+              behavior: 'smooth'
+            });
+          }, 100);
+        }
+      }
+    };
+
+    handleHashScroll();
+    window.addEventListener('hashchange', handleHashScroll);
+    return () => window.removeEventListener('hashchange', handleHashScroll);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -59,7 +83,7 @@ export const Contact = () => {
       <Navbar />
       
       {/* Main Contact Section */}
-      <section id="contact" className="relative py-20 px-4 pt-32 scroll-mt-20">
+      <section className="relative py-20 px-4 pt-32">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           
           {/* Left Column - Contact Info */}
@@ -106,7 +130,7 @@ export const Contact = () => {
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className="bg-gray-50 rounded-2xl p-8">
+          <div id="contact-form" className="bg-gray-50 rounded-2xl p-8 scroll-mt-32">
             <h2 className="text-2xl font-bold mb-6 text-foreground">Stuur ons een bericht</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Name */}
